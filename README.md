@@ -16,7 +16,7 @@ Install MySQL connector:
 
 pip install mysql-connector-python
 
-1. Python–MySQL Connection Setup
+##  Python–MySQL Connection Setup
 import mysql.connector
 
 try:
@@ -31,10 +31,10 @@ try:
 except mysql.connector.Error as err:
     print(f"Error: {err}")
 
-2. How to Create a Cursor
+##  How to Create a Cursor
 cursor = connection.cursor()
 
-3. Real Example – Sample Table
+##  Real Example – Sample Table
 
 SQL to create a sample students table:
 
@@ -53,11 +53,11 @@ VALUES
 ('Riya', 'MySQL'),
 ('Saurabh', 'Data Science');
 
-4. How to Fetch All Records
+##  How to Fetch All Records
 cursor.execute("SELECT * FROM students")
 records = cursor.fetchall()
 
-5. How to Loop Through Rows
+##  How to Loop Through Rows
 for row in records:
     print(row)
 
@@ -69,7 +69,7 @@ Example output:
 (3, 'Saurabh', 'Data Science')
 
 
-6. Error Handling (Best Practice)
+##  Error Handling (Best Practice)
 
 Use try–except to catch MySQL errors
 
@@ -77,7 +77,7 @@ Use finally block to close connection
 
 Always check connection.is_connected() before closing
 
-8. Best Practices Summary
+##  Best Practices Summary
 
 Always close cursor and connection
 
